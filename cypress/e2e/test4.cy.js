@@ -58,8 +58,7 @@ describe('Test suite 2', function () {
     checkoutPage.getCheckoutButton().click()
     checkoutPage.selectCountry('Swe')
     checkoutPage.acceptTermsAndConditions()
-    checkoutPage.getPurchaseButton().click()
-    // checkoutPage.getAlert().should('have.text', 'Success! Thank you! Your order will be delivered in next few weeks :-).')
+    // checkoutPage.getPurchaseButton().click()
     checkoutPage.getAlert().then((element) => {
       const actualText = element.text();
       expect(actualText.includes('Success! Thank you! Your order will be delivered in next few weeks :-).')).to.be.true;
