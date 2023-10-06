@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "testAll": "npx cypress run --record --key a3a2a5f4-53da-4c97-8b7b-851441b3b795 --spec cypress/e2e/test1.cy.js, cypress/e2e/test2.cy.js, cypress/e2e/test3.cy.js, cypress/e2e/test4.cy.js",
+    "testAllChromeHeaded": "npm run testAll -- --browser chrome --headed"
   },
   "author": "",
   "license": "ISC",
