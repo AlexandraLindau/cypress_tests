@@ -5,12 +5,17 @@
   "main": "index.js",
   "scripts": {
     "testAll": "npx cypress run --record --key a3a2a5f4-53da-4c97-8b7b-851441b3b795 --spec cypress/e2e/test1.cy.js, cypress/e2e/test2.cy.js, cypress/e2e/test3.cy.js, cypress/e2e/test4.cy.js",
-    "testAllChromeHeaded": "npm run testAll -- --browser chrome --headed"
+    "testAllChromeHeaded": "npm run testAll -- --browser chrome --headed",
+    "testBDDSmoke": "npx cypress run  --spec cypress/e2e/BDD/*.feature  --headed --env tags='@Smoke'"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.2",
     "cypress": "^12.17.3",
     "cypress-iframe": "^1.0.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.6"
   }
 }
