@@ -12,5 +12,9 @@
   "devDependencies": {
     "cypress": "^12.17.3",
     "cypress-iframe": "^1.0.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.6",
+    "@cypress/browserify-preprocessor": "latest"
   }
 }
